@@ -44,6 +44,8 @@ class PeopleController extends Controller
             'last_name' => 'required',
         ]);
 
+        $person = Person::findOrFail($id);
+
         $person->update([
             'first_name' => $validatedData['first_name'],
             'last_name' => $validatedData['last_name'],
