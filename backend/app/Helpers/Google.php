@@ -11,7 +11,6 @@ class Google
     public function searchGoogle(string $firstName, string $lastName): string
     {
         $query = "{$firstName}_{$lastName}";
-        // $url = "https://www.googleapis.com/customsearch/v1?key=" . urlencode($this->apiKey) . "&cx=" . urlencode($this->cx) . "&q=" . urlencode($query);
         $url = urldecode($this->customSearchUrl) . urlencode($this->apiKey) . "&cx=" . urlencode($this->cx) . "&q=" . urlencode($query);
         $json = file_get_contents($url);
         $data = json_decode($json);
