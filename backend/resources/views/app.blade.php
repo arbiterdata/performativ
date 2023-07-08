@@ -7,6 +7,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script src="{{ asset('static/js/main.b25a07c6.js') }}"></script>
+    <script src="{{ asset('static/js/main.c996c3ef.js') }}"></script>
   </body>
 </html>

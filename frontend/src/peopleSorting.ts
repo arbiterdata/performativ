@@ -14,7 +14,7 @@ export function sortPeople(people: Person[], sortKey: string, sortOrder: string)
       const nameA = a.last_name.toUpperCase();
       const nameB = b.last_name.toUpperCase();
       
-      return sameName(nameA, nameB)
+      return sortOrder === 'asc' ? sameName(nameA, nameB) : sameName(nameA, nameB) * -1
 
     });
   } else if (sortKey === 'last_name') {
@@ -28,7 +28,7 @@ export function sortPeople(people: Person[], sortKey: string, sortOrder: string)
       const nameA = a.first_name.toUpperCase();
       const nameB = b.first_name.toUpperCase();
 
-      return sameName(nameA, nameB)
+      return sortOrder === 'asc' ? sameName(nameA, nameB) : sameName(nameA, nameB) * -1
     });
   }
 
